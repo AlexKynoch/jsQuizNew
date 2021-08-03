@@ -1,7 +1,8 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
-}
+  /* box-sizing: border-box; 
+}*/
 
 body {
   font-family: "Montserrat", "sans-serif";
@@ -69,9 +70,15 @@ h2 {
 h3 {
   font-size: 12px;
   text-align: center;
+  font-weight: bold;
 }
 
 #question {
+  text-align: center;
+  font-weight: bold;
+}
+
+.section-to-hide {
   text-align: center;
 }
 
@@ -92,8 +99,15 @@ h3 {
 
 #next {
   margin-top: 1px;
+  align-items: center;
 }
 
 .hide {
   display: none;
 }
+
+/* @media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+} */
