@@ -1,18 +1,54 @@
-/* * {
+* {
   margin: 0;
   padding: 0;
-} */
+}
 
 body {
   font-family: "Montserrat", "sans-serif";
 }
 
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+.column {
+  flex: 25%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .container {
   background-color: lightgray;
 }
 
 .box {
-  width: 500px;
+  width: 700px;
   margin: 10px;
   padding: 40px;
   border-radius: 5px;
@@ -27,6 +63,11 @@ h1 {
 
 h2 {
   font-size: 20px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 12px;
   text-align: center;
 }
 

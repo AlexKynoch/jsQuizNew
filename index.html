@@ -15,6 +15,10 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Quiz</title>
   </head>
@@ -23,25 +27,74 @@
       <div class="row h-100 justify-content-center align-items-center">
         <div class="box">
           <h1 id="questionNumber">Quiz</h1>
-          <h2 id="paragraph">Welcome to the world's most exciting quiz</h2>
-          <input type="button" value="StartQuiz" id="startBtn" class="btn btn-success text-center" onclick="start()"/>
-          <div class="section-to-hide hide" id="hideThis">
-          <p id="question" >Question</p>
+          <h2 id="quizTitle">Which is the best app for your personality?</h2>
 
-          <div id="options-container" class="btn-grid row justify-content-center align-items-center" >
-            <input type="button" class="btn" id="btn1" value="Answer 1" />
-            <input type="button" class="btn" id="btn2" value="Answer 2" />
-            <input type="button" class="btn" id="btn3" value="Answer 3" />
-            <input type="button" class="btn" id="btn4" value="Answer 4" />
-          </div>
-
-          <div
-            id=" next-container"
-            class="row justify-content-center align-items-center"
-          >
-            <div id="answer-buttons" class="btn-grid">
-              <input type="button" class="next-btn btn " id="next" value="Next" />
+          <div class="row justify-content-center" id="icons">
+            <div class="column ">
+              <a href="#" class="fa fa-facebook"></a>            
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-linkedin"></a>
+              <a href="#" class="fa fa-pinterest"></a>
+              </div>
             </div>
+
+            <h3 id="paragraph">Welcome to the world's most exciting quiz</h3>
+            <input
+              type="button"
+              value="StartQuiz"
+              id="startBtn"
+              class="btn btn-success text-center"
+              onclick="start()"
+            />
+            <div class="section-to-hide hide" id="hideThis">
+              <p id="question">Question</p>
+
+              <div
+                id="options-container"
+                class="
+                  btn-grid btn-lg
+                  justify-content-center
+                  align-items-center
+                "
+              >
+                <input
+                  type="button"
+                  class="btn btn-success"
+                  id="btn1"
+                  value="Answer 1"
+                />
+                <input
+                  type="button"
+                  class="btn btn-success"
+                  id="btn2"
+                  value="Answer 2"
+                />
+                <input
+                  type="button"
+                  class="btn btn-success"
+                  id="btn3"
+                  value="Answer 3"
+                />
+                <input
+                  type="button"
+                  class="btn btn-success"
+                  id="btn4"
+                  value="Answer 4"
+                />
+              </div>
+
+              <div
+                id=" next-container"
+                class="row justify-content-center align-items-center"
+              >
+                <div id="answer-buttons" class="btn-grid">
+                  <input
+                    type="button"
+                    class="next-btn btn btn-success"
+                    id="next"
+                    value="Next"
+                  />
+                </div>
               </div>
             </div>
           </div>
