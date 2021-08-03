@@ -30,6 +30,10 @@ h2 {
   text-align: center;
 }
 
+#question {
+  text-align: center;
+}
+
 .btn {
   background-color: #007bff;
   color: white;
