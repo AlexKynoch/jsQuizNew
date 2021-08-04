@@ -32,8 +32,11 @@ function start() {
     }
     else {
         document.getElementById("questionNumber").innerHTML = "The End!";  //if no questions left in questoins array change questionNumber message to "The End!".
-        document.getElementById("question").innerHTML = "Your score is " + score;
-        document.getElementById("next-btn").remove(); //remove the text-field
+        document.getElementById("next").style.display = "none"; //remove next button
+        document.getElementById("quizTitle").innerHTML = "Your score is " + score; //change contents of quizTitle
+        document.getElementById("quizTitle").style.display = "block";// show content of quizTitle
+        document.getElementById("hideThis").style.display = "none"; //hide all the buttons
+        document.getElementById("icons").style.display = "block";
 
     }
 
