@@ -40,8 +40,12 @@ function populateAnswerOptions() {
     // document.getElementById("btn2").value = answers[0][1];
     // document.getElementById("btn3").value = answers[0][2];
     // document.getElementById("btn4").value = answers[0][3];
+}
 
-
+function whichButton(clicked_id) {
+    {
+        alert(clicked_id);
+    }
 }
 
 
