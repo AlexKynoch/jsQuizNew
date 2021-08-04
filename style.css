@@ -6,6 +6,7 @@
 
 body {
   font-family: "Montserrat", "sans-serif";
+  background-color: lightgray;
 }
 
 .fa {
@@ -44,9 +45,9 @@ body {
   justify-content: center;
   align-items: center;
 }
-.container {
+/* .container {
   background-color: lightgray;
-}
+} */
 
 .box {
   width: 500px;
