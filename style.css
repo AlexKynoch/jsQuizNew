@@ -107,6 +107,13 @@ h3 {
   display: none;
 }
 
+/* #next-container {
+  background-color: pink; */
+/* display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
 /* @media only screen and (max-width: 600px) {
   body {
     background-color: lightblue;

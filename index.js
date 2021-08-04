@@ -1,17 +1,21 @@
+window.onload = function () {
+    document.getElementById("next").style.display = "none";
+    document.getElementById("again").style.display = "none";
 
+}
 const questions = [["what color are bananas"],
 ["what color are green apples"],
 ["what color are strawberrys"],
-["If you found a baby sparrow would you?"],
+["what color are apricots"],
 ["what color are tomatos"]];
 
 const answers = [["A) yellow", "B) red", "C) pink", "D) purple"],
 ["grey", "green", "orange", "silver"],
 ["green", "red", "magenta", "jade"],
-["A) Teach it to tweet.", "B) Ask it to be your friend.", "C) Tell it about your bird nurturing skills.", "D) Pin it to a board."],
+["red", "purple", "orange", "pink"],
 ["white", "grey", "blue", "red"]];
 
-let questionNo = 1;
+let questionNo = 1; red
 let score = 0;
 
 function start() {
@@ -21,6 +25,10 @@ function start() {
     document.getElementById("paragraph").style.display = "none";
     document.getElementById("quizTitle").style.display = "none";
     document.getElementById("icons").style.display = "none";
+
+    document.getElementById("next").style.display = "block";
+    document.getElementById("again").style.display = "none";
+
 
     if (questions.length != 0) {
         populateQuestion();
@@ -32,7 +40,8 @@ function start() {
     }
     else {
         document.getElementById("questionNumber").innerHTML = "The End!";  //if no questions left in questoins array change questionNumber message to "The End!".
-        document.getElementById("next").style.display = "none"; //remove next button
+        document.getElementById("again").style.display = "block"; //remove next button
+        document.getElementById("next").style.display = "none";
         document.getElementById("quizTitle").innerHTML = "Your score is " + score; //change contents of quizTitle
         document.getElementById("quizTitle").style.display = "block";// show content of quizTitle
         document.getElementById("hideThis").style.display = "none"; //hide all the buttons
@@ -69,6 +78,10 @@ function whichButton(clicked_id) {
 
     }
 
+}
+
+function reload() {
+    location.reload();
 }
 
 // function next(clicked_id) {
