@@ -15,6 +15,7 @@ let questionNo = 1;
 let score = 0;
 
 function start() {
+    // alert("im the start function");
     document.getElementById("hideThis").style.display = "block";
     document.getElementById("startBtn").style.display = "none";
     document.getElementById("paragraph").style.display = "none";
@@ -23,10 +24,12 @@ function start() {
 
     populateQuestion();
     populateAnswerOptions();
+
 }
 
 function populateQuestion() {
-    document.getElementById("question").innerHTML = questions[0][0];
+    document.getElementById("question").innerHTML = questions[0][0]; //add question from value of element in first index of first array
+    document.getElementById("questionNumber").innerHTML = "Question " + questionNo; //add question number to page
 
 }
 
@@ -43,10 +46,17 @@ function populateAnswerOptions() {
 }
 
 function whichButton(clicked_id) {
-    {
-        alert(clicked_id);
+
+    // alert(clicked_id);
+    if ((clicked_id == "btn1") && (questionNo == 1)) {
+        alert("you pressed " + clicked_id);
+
+
     }
+
 }
+
+
 
 
 
