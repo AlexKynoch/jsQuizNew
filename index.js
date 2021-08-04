@@ -15,15 +15,27 @@ let questionNo = 1;
 let score = 0;
 
 function start() {
-    // alert("im the start function");
+
     document.getElementById("hideThis").style.display = "block";
     document.getElementById("startBtn").style.display = "none";
     document.getElementById("paragraph").style.display = "none";
     document.getElementById("quizTitle").style.display = "none";
     document.getElementById("icons").style.display = "none";
 
-    populateQuestion();
-    populateAnswerOptions();
+    if (questions.length != 0) {
+        populateQuestion();
+        populateAnswerOptions();
+        questions.shift(); //removes first array block.
+        answers.shift();
+        questionNo++;
+
+    }
+    else {
+        document.getElementById("questionNumber").innerHTML = "The End!";  //if no questions left in questoins array change questionNumber message to "The End!".
+        document.getElementById("question").innerHTML = "Your score is " + score;
+        document.getElementById("next-btn").remove(); //remove the text-field
+
+    }
 
 }
 
@@ -55,6 +67,12 @@ function whichButton(clicked_id) {
     }
 
 }
+
+// function next(clicked_id) {
+
+//     alert("im the next button")
+//     start();
+// }
 
 
 
