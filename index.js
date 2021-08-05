@@ -143,7 +143,7 @@ function buttonStyle() {
         if ((option.type == "button") && (option.attributes.disabled)) { // checks option type is button and that is has attribute of disabled 
             option.toggleAttribute("disabled"); //if has attribute of disabled whatever it is set to reverse it
             option.style.opacity = "1"; // make opacity full again
-            console.log(option);
+            // console.log(option);
         }
     })
 }
