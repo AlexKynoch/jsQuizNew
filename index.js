@@ -32,6 +32,7 @@ function start() {
 
     if (questions.length != 0) {
         populateQuestion();
+        buttonStyle();
         populateAnswerOptions();
         questions.shift(); //removes first array block.
         answers.shift();
@@ -63,37 +64,47 @@ function populateAnswerOptions() {
     document.getElementById("opt3").innerHTML = answers[0][2];
     document.getElementById("opt4").innerHTML = answers[0][3];
 
-    // document.getElementById("btn1").value = answers[0][0];  //give the buttons the value of elements at these indexes in answers array
-    // document.getElementById("btn2").value = answers[0][1];
-    // document.getElementById("btn3").value = answers[0][2];
-    // document.getElementById("btn4").value = answers[0][3];
+
 }
 
 function whichButton(clicked_id) {
 
 
-    // // if ((clicked_id == "btn1") && (questionNo == 1)) {
-    // if ((clicked_id == "btn1") && (questions.length != 0)) {
-    //     // alert("you pressed " + clicked_id);
-    //     let questNo = questionNo -= 1;
-    //     alert("question number is " + questNo);
-    //     // questNo++;
-    // }
-
     if (clicked_id == "btn1") {
+
+        disableButton();
         score = score + 1;
 
     } else if (clicked_id == "btn2") {
+        // document.getElementById("btn2").style.disabled = true;
+        // document.getElementById("btn2").style.opacity = "0.5";
+        disableButton();
         score = score + 2;
 
     } else if (clicked_id == "btn3") {
+        // document.getElementById("btn3").style.disabled = true;
+        // document.getElementById("btn3").style.opacity = "0.5";
+        disableButton();
         score = score + 3;
 
     } else {
+        // document.getElementById("btn4").style.disabled = true;
+        // document.getElementById("btn4").style.opacity = "0.5";
+        disableButton();
         score = score + 4;
 
 
     }
+}
+
+function disableButton() {
+
+    document.getElementById("options-container").style.disabled = true;
+    document.getElementById("options-container").style.opacity = "0.5";
+}
+
+function buttonStyle() {
+    document.getElementById("options-container").style.opacity = "1";
 }
 
 function reload() {
