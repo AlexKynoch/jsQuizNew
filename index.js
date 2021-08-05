@@ -15,11 +15,8 @@ const answers = [["A) Ask it to be your friend.", "B) Teach it to tweet.", "C) T
 ["A) What I ate for breakfast.", "B) This is more of a flyer really.", "C) It's all about me.", "D) A collection of other people's work."],
 ["A) Post fml and hope someone asks why so you can reply - it's private.", "B) Binge watch political debates so you can see all your old school mates.", "C) Tell your shadow about your Qualificatons.", "D) Sort through your photos."]];
 
-
-
 let questionNo = 1;
 let score = 0;
-
 
 function start() {
 
@@ -28,12 +25,8 @@ function start() {
     document.getElementById("paragraph").style.display = "none";
     document.getElementById("quizTitle").style.display = "none";
     document.getElementById("icons").style.display = "none";
-
     document.getElementById("next").style.display = "block";
     document.getElementById("again").style.display = "none";
-
-
-
 
     if (questions.length != 0) {
         populateQuestion();
@@ -54,16 +47,12 @@ function start() {
         // document.getElementById("results1").style.display = "block";
         results();
         document.getElementById("icons").style.display = "block";
-
-
     }
-
 }
 
 function populateQuestion() {
     document.getElementById("question").innerHTML = questions[0][0]; //add question from value of element in first index of first array
     document.getElementById("questionNumber").innerHTML = "Question " + questionNo; //add question number to page
-
 }
 
 function populateAnswerOptions() {
@@ -71,8 +60,6 @@ function populateAnswerOptions() {
     document.getElementById("opt2").innerHTML = answers[0][1];
     document.getElementById("opt3").innerHTML = answers[0][2];
     document.getElementById("opt4").innerHTML = answers[0][3];
-
-
 }
 
 function whichButton(clicked_id) {
@@ -120,11 +107,9 @@ function results() {
 
     } else if ((score > 13) && (score <= 18)) {
         document.getElementById("results3").style.display = "block";
-    } else if ((score > 18) && (score <= 25)) {
-
-        document.getElementById("results4").style.display = "block";
     } else {
 
+        document.getElementById("results4").style.display = "block";
     }
 
 }
