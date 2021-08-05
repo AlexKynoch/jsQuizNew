@@ -42,7 +42,7 @@ function start() {
 
     }
     else {
-        document.getElementById("questionNumber").innerHTML = "The End!";  //if no questions left in questoins array change questionNumber message to "The End!".
+        document.getElementById("questionNumber").innerHTML = "Results";  //if no questions left in questoins array change questionNumber message to "The End!".
         document.getElementById("again").style.display = "block"; //remove next button
         document.getElementById("next").style.display = "none";
         document.getElementById("quizTitle").innerHTML = "Your score is " + score; //change contents of quizTitle
@@ -100,8 +100,6 @@ function whichButton(clicked_id) {
 
 function results() {
 
-
-
     if (score <= 5) {
 
         document.getElementById("results1").style.display = "block";
@@ -118,14 +116,6 @@ function results() {
         document.getElementById("results4").style.display = "block";
     }
 }
-
-
-
-
-
-
-
-
 
 function disableButton() {
 
