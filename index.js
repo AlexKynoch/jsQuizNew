@@ -15,6 +15,8 @@ const answers = [["A) yellow", "B) red", "C) pink", "D) purple"],
 ["red", "purple", "orange", "pink"],
 ["white", "grey", "blue", "red"]];
 
+
+
 let questionNo = 1;
 let score = 0;
 
@@ -46,7 +48,10 @@ function start() {
         document.getElementById("quizTitle").innerHTML = "Your score is " + score; //change contents of quizTitle
         document.getElementById("quizTitle").style.display = "block";// show content of quizTitle
         document.getElementById("hideThis").style.display = "none"; //hide all the buttons
+        // document.getElementById("results1").style.display = "block";
+        results();
         document.getElementById("icons").style.display = "block";
+
 
     }
 
@@ -92,6 +97,35 @@ function whichButton(clicked_id) {
 
     }
 }
+
+function results() {
+
+
+
+    if (score <= 5) {
+
+        document.getElementById("results1").style.display = "block";
+
+    } else if ((score > 5) && (score <= 10)) {
+
+        document.getElementById("results2").style.display = "block"; document.getElementById("results2").style.display = "block";
+
+    } else if ((score > 10) && (score <= 15)) {
+
+        document.getElementById("results3").style.display = "block";
+    } else {
+
+        document.getElementById("results4").style.display = "block";
+    }
+}
+
+
+
+
+
+
+
+
 
 function disableButton() {
 

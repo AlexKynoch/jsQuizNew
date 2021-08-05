@@ -3,7 +3,18 @@
   padding: 0;
   /* box-sizing: border-box; 
 }*/
-
+#results1 {
+  display: none;
+}
+#results2 {
+  display: none;
+}
+#results3 {
+  display: none;
+}
+#results4 {
+  display: none;
+}
 body {
   font-family: "Montserrat", "sans-serif";
   background-color: lightgray;
@@ -77,6 +88,10 @@ h3 {
 #question {
   text-align: center;
   font-weight: bold;
+}
+
+#results {
+  text-align: center;
 }
 
 .section-to-hide {
