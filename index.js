@@ -20,6 +20,7 @@ const answers = [["A) Ask it to be your friend.", "B) Teach it to tweet.", "C) T
 let questionNo = 1;
 let score = 0;
 
+
 function start() {
 
     document.getElementById("hideThis").style.display = "block";
@@ -30,6 +31,8 @@ function start() {
 
     document.getElementById("next").style.display = "block";
     document.getElementById("again").style.display = "none";
+
+
 
 
     if (questions.length != 0) {
@@ -76,26 +79,27 @@ function whichButton(clicked_id) {
 
     if (clicked_id == "btn1") {
 
-        disableButton();
+        disableButton(clicked_id);
         score = score + 1;
 
     } else if (clicked_id == "btn2") {
 
-        disableButton();
+        disableButton(clicked_id);
         score = score + 2;
 
     } else if (clicked_id == "btn3") {
 
-        disableButton();
+        disableButton(clicked_id);
         score = score + 3;
 
     } else {
 
-        disableButton();
+        disableButton(clicked_id);
         score = score + 4;
 
 
     }
+    console.log(score);
 }
 
 function results() {
@@ -123,16 +127,25 @@ function results() {
     } else {
 
     }
+
 }
 
-function disableButton() {
+function disableButton(clicked_id) {
 
-    document.getElementById("options-container").style.disabled = true;
-    document.getElementById("options-container").style.opacity = "0.5";
+    document.getElementById(clicked_id).setAttribute("disabled", true);
+    document.getElementById(clicked_id).style.opacity = "0.5";
 }
 
 function buttonStyle() {
-    document.getElementById("options-container").style.opacity = "1";
+
+    let options = document.getElementById("options-container").childNodes; // get everything in options-container and returns an array of it 
+    options.forEach((option) => {  //goes through all of options and for each option it completes an action
+        if ((option.type == "button") && (option.attributes.disabled)) { // checks option type is button and that is has attribute of disabled 
+            option.toggleAttribute("disabled"); //if has attribute of disabled whatever it is set to reverse it
+            option.style.opacity = "1"; // make opacity full again
+            console.log(option);
+        }
+    })
 }
 
 function reload() {
