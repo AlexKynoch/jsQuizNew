@@ -3,17 +3,17 @@ window.onload = function () {
     document.getElementById("again").style.display = "none";
 
 }
-const questions = [["what color are bananas"],
-["what color are green apples"],
-["what color are strawberrys"],
-["what color are apricots"],
-["what color are tomatos"]];
+const questions = [["If you found a baby Sparrow would you?"],
+["You are at a party where you don't know anyone, would you?"],
+["Which personality is closest to yours?"],
+["If you wrote a book what would the title be?"],
+["It's Saturday night and everyone is out except you, would you?"]];
 
-const answers = [["A) yellow", "B) red", "C) pink", "D) purple"],
-["grey", "green", "orange", "silver"],
-["green", "red", "magenta", "jade"],
-["red", "purple", "orange", "pink"],
-["white", "grey", "blue", "red"]];
+const answers = [["A) Ask it to be your friend.", "B) Teach it to tweet.", "C) Tell it about your bird nurturing skills.", "D) Pin it to a board."],
+["A) Wait until someone mentions something interesting then follow them.", "B) Go home, it's full of peasants anyway.", "C) Only talk to people who look like they are in recruitment.", "D) Show the hosts how to redesign their ugly kitchen."],
+["A) I have millions of friends I've never met.", "B) I like to keep it brief.", "C) I like everyone to know how wonderful I am.", "D) I like to collect other people's photos and organise them."],
+["A) What I ate for breakfast.", "B) This is more of a flyer really.", "C) It's all about me.", "D) A collection of other people's work."],
+["A) Post fml and hope someone asks why so you can reply - it's private.", "B) Binge watch political debates so you can see all your old school mates.", "C) Tell your shadow about your Qualificatons.", "D) Sort through your photos."]];
 
 
 
