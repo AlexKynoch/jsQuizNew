@@ -15,7 +15,7 @@ const answers = [["A) yellow", "B) red", "C) pink", "D) purple"],
 ["red", "purple", "orange", "pink"],
 ["white", "grey", "blue", "red"]];
 
-let questionNo = 1; red
+let questionNo = 1;
 let score = 0;
 
 function start() {
@@ -71,24 +71,36 @@ function populateAnswerOptions() {
 
 function whichButton(clicked_id) {
 
-    // alert(clicked_id);
-    if ((clicked_id == "btn1") && (questionNo == 1)) {
-        alert("you pressed " + clicked_id);
+
+    // // if ((clicked_id == "btn1") && (questionNo == 1)) {
+    // if ((clicked_id == "btn1") && (questions.length != 0)) {
+    //     // alert("you pressed " + clicked_id);
+    //     let questNo = questionNo -= 1;
+    //     alert("question number is " + questNo);
+    //     // questNo++;
+    // }
+
+    if (clicked_id == "btn1") {
+        score = score + 1;
+
+    } else if (clicked_id == "btn2") {
+        score = score + 2;
+
+    } else if (clicked_id == "btn3") {
+        score = score + 3;
+
+    } else {
+        score = score + 4;
 
 
     }
-
 }
 
 function reload() {
     location.reload();
 }
 
-// function next(clicked_id) {
 
-//     alert("im the next button")
-//     start();
-// }
 
 
 
