@@ -48,8 +48,8 @@ function start() {
         document.getElementById("questionNumber").innerHTML = "Results";  //if no questions left in questoins array change questionNumber message to "The End!".
         document.getElementById("again").style.display = "block"; //remove next button
         document.getElementById("next").style.display = "none";
-        document.getElementById("quizTitle").innerHTML = "Your score is " + score; //change contents of quizTitle
-        document.getElementById("quizTitle").style.display = "block";// show content of quizTitle
+        // document.getElementById("quizTitle").innerHTML = "Your score is " + score; //change contents of quizTitle
+        // document.getElementById("quizTitle").style.display = "block";// show content of quizTitle
         document.getElementById("hideThis").style.display = "none"; //hide all the buttons
         // document.getElementById("results1").style.display = "block";
         results();
@@ -95,7 +95,7 @@ function whichButton(clicked_id) {
     } else {
 
         disableButton(clicked_id);
-        score = score + 4;
+        score = score + 5;
 
 
     }
@@ -110,18 +110,17 @@ function results() {
         document.getElementById("quizTitle").style.display = "none";
         document.getElementById("results0").style.display = "block";
 
-    } else if (score <= 5) {
+    } else if ((score >= 5) && (score <= 8)) {
 
         document.getElementById("results1").style.display = "block";
 
-    } else if ((score > 5) && (score <= 10)) {
+    } else if ((score > 8) && (score <= 13)) {
 
         document.getElementById("results2").style.display = "block"; document.getElementById("results2").style.display = "block";
 
-    } else if ((score > 10) && (score <= 15)) {
-
+    } else if ((score > 13) && (score <= 18)) {
         document.getElementById("results3").style.display = "block";
-    } else if ((score > 15) && (score <= 20)) {
+    } else if ((score > 18) && (score <= 25)) {
 
         document.getElementById("results4").style.display = "block";
     } else {
