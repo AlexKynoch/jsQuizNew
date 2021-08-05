@@ -100,7 +100,13 @@ function whichButton(clicked_id) {
 
 function results() {
 
-    if (score <= 5) {
+
+    if (score == 0) {
+
+        document.getElementById("quizTitle").style.display = "none";
+        document.getElementById("results0").style.display = "block";
+
+    } else if (score <= 5) {
 
         document.getElementById("results1").style.display = "block";
 
@@ -111,9 +117,11 @@ function results() {
     } else if ((score > 10) && (score <= 15)) {
 
         document.getElementById("results3").style.display = "block";
-    } else {
+    } else if ((score > 15) && (score <= 20)) {
 
         document.getElementById("results4").style.display = "block";
+    } else {
+
     }
 }
 
