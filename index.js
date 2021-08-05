@@ -69,27 +69,23 @@ function populateAnswerOptions() {
 
 function whichButton(clicked_id) {
 
-
     if (clicked_id == "btn1") {
 
         disableButton();
         score = score + 1;
 
     } else if (clicked_id == "btn2") {
-        // document.getElementById("btn2").style.disabled = true;
-        // document.getElementById("btn2").style.opacity = "0.5";
+
         disableButton();
         score = score + 2;
 
     } else if (clicked_id == "btn3") {
-        // document.getElementById("btn3").style.disabled = true;
-        // document.getElementById("btn3").style.opacity = "0.5";
+
         disableButton();
         score = score + 3;
 
     } else {
-        // document.getElementById("btn4").style.disabled = true;
-        // document.getElementById("btn4").style.opacity = "0.5";
+
         disableButton();
         score = score + 4;
 
