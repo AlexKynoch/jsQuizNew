@@ -20,6 +20,18 @@ let score = 0;
 
 function start() {
 
+    hideOrBlock();
+
+    if (questions.length != 0) {
+
+        runQuizQuestions()
+    }
+    else {
+        runResults();
+    }
+}
+
+function hideOrBlock() {
     document.getElementById("hideThis").style.display = "block";
     document.getElementById("startBtn").style.display = "none";
     document.getElementById("paragraph").style.display = "none";
@@ -27,27 +39,24 @@ function start() {
     document.getElementById("icons").style.display = "none";
     document.getElementById("next").style.display = "block";
     document.getElementById("again").style.display = "none";
+}
 
-    if (questions.length != 0) {
-        populateQuestion();
-        buttonStyle();
-        populateAnswerOptions();
-        questions.shift(); //removes first array block.
-        answers.shift();
-        questionNo++;
+function runQuizQuestions() {
+    populateQuestion();
+    buttonStyle();
+    populateAnswerOptions();
+    questions.shift(); //removes first array block.
+    answers.shift();
+    questionNo++;
+}
 
-    }
-    else {
-        document.getElementById("questionNumber").innerHTML = "Results";  //if no questions left in questoins array change questionNumber message to "The End!".
-        document.getElementById("again").style.display = "block"; //remove next button
-        document.getElementById("next").style.display = "none";
-        // document.getElementById("quizTitle").innerHTML = "Your score is " + score; //change contents of quizTitle
-        // document.getElementById("quizTitle").style.display = "block";// show content of quizTitle
-        document.getElementById("hideThis").style.display = "none"; //hide all the buttons
-        // document.getElementById("results1").style.display = "block";
-        results();
-        document.getElementById("icons").style.display = "block";
-    }
+function runResults() {
+    document.getElementById("questionNumber").innerHTML = "Results";  //if no questions left in questoins array change questionNumber message to "The End!".
+    document.getElementById("again").style.display = "block"; //remove next button
+    document.getElementById("next").style.display = "none";
+    document.getElementById("hideThis").style.display = "none"; //hide all the buttons
+    results();
+    document.getElementById("icons").style.display = "block";
 }
 
 function populateQuestion() {
@@ -62,7 +71,7 @@ function populateAnswerOptions() {
     document.getElementById("opt4").innerHTML = answers[0][3];
 }
 
-function whichButton(clicked_id) {
+function whichBtnPressed(clicked_id) {
 
     if (clicked_id == "btn1") {
 
@@ -103,7 +112,7 @@ function results() {
 
     } else if ((score > 8) && (score <= 13)) {
 
-        document.getElementById("results2").style.display = "block"; document.getElementById("results2").style.display = "block";
+        document.getElementById("results2").style.display = "block";
 
     } else if ((score > 13) && (score <= 18)) {
         document.getElementById("results3").style.display = "block";
@@ -127,7 +136,6 @@ function buttonStyle() {
         if ((option.type == "button") && (option.attributes.disabled)) { // checks option type is button and that is has attribute of disabled 
             option.toggleAttribute("disabled"); //if has attribute of disabled whatever it is set to reverse it
             option.style.opacity = "1"; // make opacity full again
-            // console.log(option);
         }
     })
 }
