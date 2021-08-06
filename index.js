@@ -13,7 +13,7 @@ const answers = [["A) Ask it to be your friend.", "B) Teach it to tweet.", "C) T
 ["A) Wait until someone mentions something interesting then follow them.", "B) Go home, it's full of peasants anyway.", "C) Only talk to people who look like they are in recruitment.", "D) Show the hosts how to redesign their ugly kitchen."],
 ["A) I have millions of friends I've never met.", "B) I like to keep it brief.", "C) I like everyone to know how wonderful I am.", "D) I like to collect other people's photos and organise them."],
 ["A) What I ate for breakfast.", "B) This is more of a flyer really.", "C) It's all about me.", "D) A collection of other people's work."],
-["A) Post fml and hope someone asks why so you can reply - it's private.", "B) Binge watch political debates so you can see all your old school mates.", "C) Tell your shadow about your Qualificatons.", "D) Sort through your photos."]];
+["A) Post fml and hope someone asks why so you can reply - it's private.", "B) Binge watch The House of Lords so you can see all your old school mates.", "C) Tell your shadow about your Qualificatons.", "D) Sort through your photos."]];
 
 let questionNo = 1;
 let score = 0;
