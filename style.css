@@ -95,6 +95,19 @@ h3 {
   text-align: center;
 }
 
+#opt1,
+#opt2,
+#opt3,
+#opt4 {
+  border: 1px solid grey;
+  background-color: rgb(196, 195, 195);
+  box-shadow: 1px 8px 15px #888888;
+  border-radius: 5px;
+  margin: 1px;
+  padding: 10px;
+  text-align: left;
+}
+
 .section-to-hide {
   text-align: center;
 }
